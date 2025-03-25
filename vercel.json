@@ -1,27 +1,20 @@
 {
-  "name": "ai-recruitment-assistant-pro",
+  "headers": [
+    {
+      "source": "/(.*)\\.js",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/javascript"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        }
+      ]
+    }
+  ],
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "devCommand": "npm run dev",
-  "installCommand": "npm install",
-  "version": 2,
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist"
-      }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
-  ],
-  "env": {
-    "VITE_SUPABASE_URL": "https://jqwlfigxpmxbarcdbmpc.supabase.co",
-    "VITE_SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Impxd2xmaWd4cG14YmFyY2RibXBjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDI4OTQ1MDcsImV4cCI6MjA1ODQ3MDUwN30.PnHJ0VC_Re6vOuGh-TGcGdeLvN3MqlCK5fNmqBV1n6g"
-  }
+  "framework": "vite"
 } 

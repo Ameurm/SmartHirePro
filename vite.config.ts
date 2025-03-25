@@ -17,12 +17,6 @@ export default defineConfig({
       'X-Content-Type-Options': 'nosniff',
       'Access-Control-Allow-Origin': '*',
     },
-    middleware: (req, res, next) => {
-      if (req.url.endsWith('.js')) {
-        res.setHeader('Content-Type', 'application/javascript');
-      }
-      next();
-    },
   },
   build: {
     rollupOptions: {
@@ -38,6 +32,7 @@ export default defineConfig({
     },
     target: 'esnext',
     modulePreload: true,
+    sourcemap: true,
   },
   optimizeDeps: {
     include: ['compromise'],
