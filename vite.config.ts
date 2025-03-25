@@ -15,6 +15,13 @@ export default defineConfig({
     headers: {
       'Content-Type': 'application/javascript',
       'X-Content-Type-Options': 'nosniff',
+      'Access-Control-Allow-Origin': '*',
+    },
+    middleware: (req, res, next) => {
+      if (req.url.endsWith('.js')) {
+        res.setHeader('Content-Type', 'application/javascript');
+      }
+      next();
     },
   },
   build: {
@@ -29,8 +36,11 @@ export default defineConfig({
     commonjsOptions: {
       include: [/compromise/, /node_modules/],
     },
+    target: 'esnext',
+    modulePreload: true,
   },
   optimizeDeps: {
     include: ['compromise'],
+    exclude: ['lucide-react'],
   },
 });
