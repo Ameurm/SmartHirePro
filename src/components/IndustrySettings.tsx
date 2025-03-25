@@ -12,7 +12,7 @@ import {
   Check
 } from 'lucide-react';
 
-export function IndustrySettingsPanel() {
+export function IndustrySettingsView() {
   const [selectedIndustry, setSelectedIndustry] = useState<Industry>('technology');
   const [settings, setSettings] = useState<IndustrySettingsType>(defaultIndustrySettings.technology);
   const [newCompliance, setNewCompliance] = useState<Partial<ComplianceRequirement>>({});
