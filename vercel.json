@@ -1,4 +1,9 @@
 {
+  "name": "ai-recruitment-assistant-pro",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "devCommand": "npm run dev",
+  "installCommand": "npm install",
   "version": 2,
   "builds": [
     {
