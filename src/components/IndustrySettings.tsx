@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Industry, IndustrySettings as IndustrySettingsType, ComplianceRequirement } from '../types/industry';
+import { defaultIndustrySettings } from '../data/industrySettings';
+import { Building2, Plus, Trash2, Save, AlertCircle } from 'lucide-react';
 import { 
   Briefcase, 
   Shield, 
@@ -7,11 +9,8 @@ import {
   Brain, 
   Hash, 
   Award,
-  Plus,
-  Trash2,
   Check
 } from 'lucide-react';
-import { defaultIndustrySettings } from '../data/industrySettings';
 
 export function IndustrySettingsPanel() {
   const [selectedIndustry, setSelectedIndustry] = useState<Industry>('technology');
