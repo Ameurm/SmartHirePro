@@ -9,7 +9,7 @@ import { Interviews } from './components/Interviews';
 import { Settings } from './components/Settings';
 import { Pricing } from './components/Pricing';
 import { JobPostModal } from './components/JobPostModal';
-import { IndustrySettingsView } from './components/IndustrySettings';
+import { IndustrySettingsPanel } from './components/IndustrySettings';
 import { Analytics } from './components/Analytics';
 
 function App() {
@@ -76,7 +76,7 @@ function App() {
       case 'analytics':
         return <Analytics />;
       case 'industry':
-        return <IndustrySettingsView />;
+        return <IndustrySettingsPanel />;
       case 'pricing':
         return <Pricing />;
       case 'settings':
