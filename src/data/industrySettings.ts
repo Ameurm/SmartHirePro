@@ -1,6 +1,6 @@
-import { Industry, IndustrySettings } from '../types/industry';
+import { Industry, IndustrySettingsType } from '../types/industry';
 
-export const defaultIndustrySettings: Record<Industry, IndustrySettings> = {
+export const defaultIndustrySettings: Record<Industry, IndustrySettingsType> = {
   technology: {
     industry: 'technology',
     compliance: [],

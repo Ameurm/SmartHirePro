@@ -16,7 +16,7 @@ export type ComplianceRequirement = {
   region: string[];
 };
 
-export type IndustrySettings = {
+export type IndustrySettingsType = {
   industry: Industry;
   compliance: ComplianceRequirement[];
   requiredFields: string[];
@@ -66,5 +66,5 @@ export type Client = {
   };
   integrations: Integration[];
   analytics: Analytics;
-  settings: IndustrySettings;
+  settings: IndustrySettingsType;
 }; 
